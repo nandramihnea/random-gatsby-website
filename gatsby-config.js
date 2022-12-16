@@ -3,15 +3,45 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `random-gatsby-website`,
-    siteUrl: `https://www.yourdomain.tld`
+    siteUrl: `https://www.yourdomain.tld`,
+    title: "My website",
   },
-  plugins: ["gatsby-plugin-mdx", {
-    resolve: 'gatsby-source-filesystem',
-    options: {
-      "name": "pages",
-      "path": "./src/pages/"
+  plugins: [
+    `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-postcss`,
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: `markdown`,
+        path: `${__dirname}/markdown`,
+      },
     },
-    __key: "pages"
-  }]
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /images/,
+        },
+      },
+    },
+    {
+      resolve: `gatsby-omni-font-loader`,
+      options: {
+        enableListener: true,
+        preconnect: [
+          `https://fonts.googleapis.com`,
+          `https://fonts.gstatic.com`,
+        ],
+        web: [
+          {
+            name: `Indie Flower`,
+            file: `https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap`,
+          },
+        ],
+      },
+    },
+    `gatsby-plugin-mdx`,
+  ],
 };
