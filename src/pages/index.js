@@ -1,30 +1,32 @@
-import Layout from "/src/components/layout";
-import Space from '../images/space.svg';
+import Layout from "/src/components/layout/layout";
 import React from "react";
-import { AppContextProvider } from "../hooks/appContext";
+import { useKeyPress } from "../hooks/useKeyPress";
+import { useAppContext } from "../context/appContext";
+import Page1 from "../components/page1/page1";
+import Page2 from "../components/page2/page2";
+import Page3 from "../components/page3/page3";
 
 const IndexPage = () => {
+  useKeyPress();
 
-  return (
-    <AppContextProvider>
-      <Layout>
-        <div className="grid h-full justify-items-center content-center">
-          <iframe
-            src="https://giphy.com/embed/tmQrpA8zpG4a16SSxm"
-            width="580"
-            height="580"
-            allowFullScreen
-            title="monkey"
-          ></iframe>
-          <div className="flex gap-6 pt-20 items-center">
-            <p className="text-6xl">Press space</p>
-            <Space />
-            <p className="text-6xl">when bored</p>
-          </div>
-        </div>
-      </Layout>
-    </AppContextProvider>
-  );
+  const { pageNumber } = useAppContext();
+
+  const renderPages = () => {
+    switch(pageNumber) {
+      case 1: {
+        return <Page1 />
+      }
+      case 2: {
+        return <Page2 />
+      }
+      case 3: {
+        return <Page3 />
+      }
+      default: <Page1 />
+    }
+  }
+
+  return <Layout>{renderPages()}</Layout>;
 };
 
 export default IndexPage;

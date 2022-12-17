@@ -14,8 +14,8 @@ module.exports = {
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        name: `markdown`,
-        path: `${__dirname}/markdown`,
+        name: `blog`,
+        path: `${__dirname}/blog`,
       },
     },
     {
@@ -42,6 +42,6 @@ module.exports = {
         ],
       },
     },
-    `gatsby-plugin-mdx`,
+    `gatsby-transformer-remark`,
   ],
 };

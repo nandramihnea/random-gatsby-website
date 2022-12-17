@@ -1,14 +1,21 @@
 // check if spacebar is pressed
 import { useEffect } from "react";
-import { useAppContext } from "./appContext";
+import { useAppContext } from "../context/appContext";
+
+//this should be somehow calculated but ain't nobody got time for that
+const NUMBER_OF_PAGES = 3;
 
 export const useKeyPress = () => {
-  const { shouldShowSvg, setShouldShowSvg } = useAppContext();
-  console.log("shouldShow", shouldShowSvg);
+  const { shouldShowSvg, setShouldShowSvg, setPageNumber, pageNumber } =
+    useAppContext();
 
   const detectKeyPress = (e) => {
-    if(e.which === 32) {
-      setShouldShowSvg(true);
+    // 32 is the ASCII key for the spacebar key
+    if (e.which === 32) {
+      if (pageNumber < NUMBER_OF_PAGES) {
+        setShouldShowSvg(false);
+        setPageNumber(pageNumber + 1);
+      }
     }
   };
 
@@ -17,5 +24,5 @@ export const useKeyPress = () => {
     return () => {
       document.removeEventListener("keydown", detectKeyPress, true);
     };
-  }, []);
+  }, [pageNumber]);
 };
