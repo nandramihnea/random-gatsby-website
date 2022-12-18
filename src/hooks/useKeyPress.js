@@ -3,10 +3,10 @@ import { useEffect } from "react";
 import { useAppContext } from "../context/appContext";
 
 //this should be somehow calculated but ain't nobody got time for that
-const NUMBER_OF_PAGES = 3;
+const NUMBER_OF_PAGES = 5;
 
 export const useKeyPress = () => {
-  const { shouldShowSvg, setShouldShowSvg, setPageNumber, pageNumber } =
+  const { setShouldShowSvg, setPageNumber, pageNumber } =
     useAppContext();
 
   const detectKeyPress = (e) => {

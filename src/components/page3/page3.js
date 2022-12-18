@@ -2,51 +2,52 @@ import React, { useEffect } from "react";
 import { useAppContext } from "../../context/appContext";
 import Space from "../../images/space.svg";
 import { useStaticQuery, graphql } from "gatsby";
+import { content } from "./page3.module.css";
 
 const Page3 = () => {
   const data = useStaticQuery(graphql`
-  query {
-    allMarkdownRemark {
-      nodes {
-        id
-        html
-        frontmatter {
-          title
-        }
+    query {
+      allMarkdownRemark {
+        nodes {
+          id
+          html
+          frontmatter {
+            title
+          }
         }
       }
     }
   `);
 
   const pageInfo = data.allMarkdownRemark.nodes[0];
-  console.log("🚀 ~ file: page3.js:22 ~ Page3 ~ pageInfo", pageInfo)
 
-  const { setPageNumber, setTimer, shouldShowSvg, timer } =
-    useAppContext();
+  const { setTimer, shouldShowSvg } = useAppContext();
 
   useEffect(() => {
     setTimer(4000);
   }, []);
 
-  const onClickHandler = () => {
-    setPageNumber(1);
-  };
+  const spaceClass = shouldShowSvg ? 'visible' : 'invisible';
 
   return (
     <div>
-      <h1 className="text-6xl">{pageInfo.frontmatter.title}</h1>
-      <div dangerouslySetInnerHTML={{ __html: pageInfo.html }} />
-
-      <div className="bg-lime-200 rounded-xl p-8 w-fit">
-        <p className="text-xl pb-8">Can't get enough of this masterpiece?</p>
-        <button
-          className="bg-green-600 text-lg text-slate-200 px-6 py-3 rounded-lg"
-          onClick={onClickHandler}
-        >
-          Start over
-        </button>
+      <h1 className="text-6xl mb-10">{pageInfo.frontmatter.title}</h1>
+      <div className="grid grid-cols-2 gap-x-40">
+        <div
+          className={content + " prose max-w-none"}
+          dangerouslySetInnerHTML={{ __html: pageInfo.html }}
+        />
+        <div className="grid justify-items-center items-center">
+          <p className="h-max text-blue-900 text-3xl">
+            The content from the left side was written in a markdown file called{" "}
+            <span className="italic text-yellow-500 bg-slate-700 px-2 rounded-xl text-2xl">
+              decent.md
+            </span>
+            and brought to the page with a graphql query
+          </p>
+          <Space className={spaceClass + ` animate-bounce`} />
+        </div>
       </div>
-      {/* {shouldShowSvg && <Space />} */}
     </div>
   );
 };

@@ -34,8 +34,8 @@ const Page2 = () => {
           alt="laugh"
           placeholder="blurred"
           layout="fixed"
-          width={500}
-          height={500}
+          width={400}
+          height={400}
         />
       </div>
       {shouldShowSvg && (

@@ -10,7 +10,7 @@ It means
 * self-governence
 * a life worth living
 
-<h2>Why?</h2>
+## Why?
 A world where you own your assets, your data, your identity,
 your spirit is a world worth living in.
 

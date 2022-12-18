@@ -17,6 +17,7 @@
   "license": "0BSD",
   "dependencies": {
     "@mdx-js/react": "^2.2.1",
+    "@tailwindcss/typography": "^0.5.8",
     "gatsby": "^5.2.0",
     "gatsby-omni-font-loader": "^2.0.2",
     "gatsby-plugin-image": "^3.3.2",
