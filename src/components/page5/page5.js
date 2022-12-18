@@ -11,13 +11,13 @@ const Page5 = () => {
 
   return (
     <div className='grid justify-items-center gap-y-20 items-center'>
-      <p className="text-3xl text-gray-700">
+      <p className="text-4xl text-gray-700">
         I hope you enjoyed the result as much as I did enjoy this challange
       </p>
       <iframe
         src="https://giphy.com/embed/1eChSPFlFeaAzsoB9v"
-        width="480"
-        height="480"
+        width="380"
+        height="380"
         class="giphy-embed"
         allowFullScreen
         title='hopefully'

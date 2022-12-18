@@ -18,4 +18,4 @@ A world where **physical money**, **centralized banks**,
 **governments**, **political parties** start being obsolete,
 is a world that Sir John Lennon ... imagined
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/YkgkThdzX-8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="360" height="215" src="https://www.youtube.com/embed/YkgkThdzX-8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

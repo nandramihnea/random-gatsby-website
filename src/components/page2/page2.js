@@ -17,8 +17,8 @@ const Page2 = () => {
         alt="hw1"
         placeholder="blurred"
         layout="fixed"
-        width={700}
-        height={700}
+        width={600}
+        height={600}
       />
       <div className="grid content-between justify-items-center">
         <StaticImage

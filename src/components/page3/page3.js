@@ -24,14 +24,14 @@ const Page3 = () => {
   const { setTimer, shouldShowSvg } = useAppContext();
 
   useEffect(() => {
-    setTimer(4000);
+    setTimer(7000);
   }, []);
 
   const spaceClass = shouldShowSvg ? 'visible' : 'invisible';
 
   return (
     <div>
-      <h1 className="text-6xl mb-10">{pageInfo.frontmatter.title}</h1>
+      <h1 className="text-5xl mb-10">{pageInfo.frontmatter.title}</h1>
       <div className="grid grid-cols-2 gap-x-40">
         <div
           className={content + " prose max-w-none"}

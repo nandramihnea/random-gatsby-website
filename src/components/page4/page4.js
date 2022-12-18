@@ -34,22 +34,22 @@ const Page4 = () => {
         )}
         <Space className={spaceClass + ` animate-bounce`} />
       </div>
-      <h1 className="text-6xl mt-40 mb-20">
+      <h1 className="text-5xl mt-20 mb-16">
         How did I use React context in this project?
       </h1>
-      <div className="text-3xl text-gray-700">
+      <div className="text-xl text-gray-700">
         <p className="mb-6">
           I've used it for exposing 3 React state values in the entire app.
         </p>
         <p>Those 3 are:</p>
         <ul className="grid gap-y-8 m-12">
-          <li className="max-w-prose">
+          <li>
             <span className="mr-2 italic text-yellow-500 bg-slate-700 px-2 rounded-xl text-2xl">
               shouldShowSvg
             </span>
             keeps track of whether the space svg should show or not
           </li>
-          <li className="max-w-prose">
+          <li>
             <span className="mr-2 italic text-yellow-500 bg-slate-700 px-2 rounded-xl text-2xl">
               timer
             </span>
