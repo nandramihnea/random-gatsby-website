@@ -11,11 +11,12 @@ const Page1 = () => {
         allowFullScreen
         title="monkey"
       ></iframe>
-      <div className="flex gap-6 pt-20 items-center">
+      <div className="flex gap-6 pt-20 items-center mb-8">
         <p className="text-6xl">Press space</p>
         <Space className="animate-bounce" />
         <p className="text-6xl">when bored</p>
       </div>
+      <p>Spacebar toggles between pages</p>
     </div>
   );
 }

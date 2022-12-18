@@ -2,7 +2,7 @@
 import { useEffect } from "react";
 import { useAppContext } from "../context/appContext";
 
-//this should be somehow calculated but ain't nobody got time for that
+//this should be taken from a graphql query for allFiles.length.. smth like that
 const NUMBER_OF_PAGES = 5;
 
 export const useKeyPress = () => {

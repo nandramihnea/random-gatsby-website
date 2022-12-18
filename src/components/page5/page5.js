@@ -12,7 +12,7 @@ const Page5 = () => {
   return (
     <div className='grid justify-items-center gap-y-20 items-center'>
       <p className="text-3xl text-gray-700">
-        I hope you enjoyed the result as much as I did this challange
+        I hope you enjoyed the result as much as I did enjoy this challange
       </p>
       <iframe
         src="https://giphy.com/embed/1eChSPFlFeaAzsoB9v"

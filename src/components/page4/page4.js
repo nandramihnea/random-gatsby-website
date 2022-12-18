@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { StaticImage } from "gatsby-plugin-image";
 import Space from "../../images/space.svg";
 import { useAppContext } from '../../context/appContext';
 
 const Page4 = () => {
   const { shouldShowSvg, setTimer } = useAppContext();
-  const [countdown, setCountdown] = useState(4);
+  const [countdown, setCountdown] = useState(10);
 
   useEffect(() => {
     const timerInt = countdown > 0 &&
@@ -16,7 +15,7 @@ const Page4 = () => {
   }, [countdown])
 
   useEffect(() => {
-    setTimer(4000);
+    setTimer(10000);
   }, [])
 
   const spaceClass = shouldShowSvg ? "visible" : "invisible";
